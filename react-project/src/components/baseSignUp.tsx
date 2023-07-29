@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { TextField } from "@mui/material";
+
+
 type props = {numberOFFields: number} & Partial<typeof defaultProps>;
 const defaultProps = {
   mainTitle: "Sign Up",
@@ -5,29 +9,24 @@ const defaultProps = {
   textButtonSumbit: "Next",
   Ispasword: [false, 0], //[isPassword , indexOfInput]
   Isemail: [false, 0], //[isEmail , indexOfInput]
+  label : ["password" , "email" , "text"],
 };
 
 function BaseSignUp(propsIN: props) {
-
-    const [F]
-
-    Fields.map()=>{
-
-    };
-
-    const createInputFields =()  => {
-        return (
-            for(let i = 0; i<props.numberOFFields ; i++){
-                {<div></div>}
-            }
-        )
-    };
-
   const props = { ...defaultProps, ...propsIN };
-
+  const [fields , setFields] = useState(new Array(props.numberOFFields).fill(""));
+  const [isPassword , setIsPassword] = useState(props.Ispasword[0]);
+  const [isEmail , setIsEmail] = useState(props.Isemail[0]);
+  const [indexOfInput , setIndexOfInput] = useState(props.Ispasword[1]);
+  const [indexOfInputEmail , setIndexOfInputEmail] = useState(props.Isemail[1]);
+  
+  const AddFildes = () => {
+    
+  };
 
   return (<div id="wraper">
-    
+    {fields.map((field :number , index:number) => (<div >
+      <TextField placeholder="text..." label={props.label[index]} /> </div>), )}
   </div>);
 }
 
