@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { TextField } from "@mui/material";
-
+import Button from "@mui/material/Button/Button";
 
 type props = {numberOFFields: number} & Partial<typeof defaultProps>;
 const defaultProps = {
   mainTitle: "Sign Up",
   secondTitle: "Create your account",
   textButtonSumbit: "Next",
-  Ispasword: [false, 0], //[isPassword , indexOfInput]
-  Isemail: [false, 0], //[isEmail , indexOfInput]
+  Ispasword: [false, 0], //[isPassword , indexOfField]
+  Isemail: [false, 0], //[isEmail , indexOfField]
   label : ["password" , "email" , "text"],
 };
 
@@ -27,6 +27,7 @@ function BaseSignUp(propsIN: props) {
   return (<div id="wraper">
     {fields.map((field :number , index:number) => (<div >
       <TextField placeholder="text..." label={props.label[index]} /> </div>), )}
+<Button variant="contained" size="large">next</Button>
   </div>);
 }
 
