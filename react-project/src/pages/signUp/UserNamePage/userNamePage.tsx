@@ -1,11 +1,14 @@
-
-import BaseSignUp from "../../../components/baseSignUp";  
-
-
+import BaseSignUp from "../../../components/baseSignUp";
 
 function UserNamePage() {
-return (<div>
-  <BaseSignUp numberOFFields={2} label={["Username","password"]} secondTitle="UserName"  />
-    </div>);
-};
+  return (
+    <div>
+      <BaseSignUp
+        numberOFFields={2}
+        label={["Username", "password", "passwordValidation"]}
+        secondTitle="UserName"
+      />
+    </div>
+  );
+}
 export default UserNamePage;

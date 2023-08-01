@@ -9,7 +9,7 @@ const defaultProps = {
   firstSymbol: "☼",
   secondSymbol: "☽",
   startingTheme: "light",
-  buttonActiveColorDark: "rgb(53, 5, 50)",
+  buttonActiveColorDark: "rgb(20, 27, 32)",
   buttonActiveColorLight: "rgb(233, 230, 147)",
   textActiveColorDark: "white",
   textActiveColorLight: "black",
