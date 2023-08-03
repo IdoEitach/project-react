@@ -10,7 +10,7 @@ import NvarBar from "./components/Bar";
 function App() {
   const [theme, setTheme] = useState("light");
   if (theme === "dark") {
-    document.body.style.backgroundColor = "rgb(20, 27, 32)";
+    document.body.style.backgroundColor = "#0f0f0f";
   } else {
     document.body.style.backgroundColor = "#fff";
   }
@@ -19,10 +19,8 @@ function App() {
       <div className="App">
         <ButtonTheme />
         <HomePage />
-
-        <div>
-          <NvarBar></NvarBar>
-        </div>
+        {/* <UserNamePage /> */}
+        <div></div>
       </div>
     </ThemeContext.Provider>
   );
