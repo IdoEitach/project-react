@@ -1,18 +1,13 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "../pages/homePage/home";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "../pages/homePage/home";
 import UserNamePage from "../pages/signUp/UserNamePage/userNamePage";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <UserNamePage />,
-  },
-  {
-    path: "home",
-    element: <Home />,
-  },
-]);
-
-<RouterProvider router={router} />;
-
-export {};
+function Router() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/signUp" element={<UserNamePage />} />
+    </Routes>
+  );
+}
+export default Router;

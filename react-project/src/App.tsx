@@ -6,6 +6,8 @@ import { ThemeContext } from "./context/ThemeContext";
 import ButtonTheme from "./components/Button-Theme";
 import HomePage from "./pages/homePage/home";
 import NvarBar from "./components/Bar";
+import { Route, Routes } from "react-router-dom";
+import Router from "./router/router";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -16,11 +18,12 @@ function App() {
   }
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div>
+        <NvarBar />
+      </div>
       <div className="App">
         <ButtonTheme />
-        <HomePage />
-        {/* <UserNamePage /> */}
-        <div></div>
+        <Router />
       </div>
     </ThemeContext.Provider>
   );

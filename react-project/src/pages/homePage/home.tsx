@@ -4,13 +4,26 @@ import cdoe02 from "../../img/code02.jpg";
 
 function homePage() {
   return (
-    <div>
-      <h1>Home</h1>
+    <div id="homeWarper">
       <div>
-        <img src={code} alt="codeImg" className="imgs" />
+        <h1>Home</h1>
       </div>
-      <div>
-        <img src={cdoe02} className="imgs" />
+      <div className="imgWarper">
+        <div className="img">
+          <img src={cdoe02} className="imgs" />
+        </div>
+        <div className="img">
+          <img src={cdoe02} className="imgs" />
+        </div>
+      </div>
+
+      <div className="imgWarper">
+        <div className="img">
+          <img src={code} alt="codeImg" className="imgs" />
+        </div>
+        <div className="img">
+          <img src={code} alt="codeImg" className="imgs" />
+        </div>
       </div>
     </div>
   );
