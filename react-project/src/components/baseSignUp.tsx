@@ -64,6 +64,22 @@ function BaseSignUp(propsIN: props) {
               />
             </div>
           );
+        } else if (label === "email" || label === "Email") {
+          return (
+            <div key={index}>
+              <TextField
+                style={{
+                  WebkitTextFillColor: theme === "light" ? "black" : "white",
+                  border:
+                    theme === "light" ? "1px solid white" : "1px solid black",
+                  borderRadius: "5px",
+                }}
+                type="Email"
+                placeholder={label + "..."}
+                label={label}
+              />
+            </div>
+          );
         }
         return (
           <TextField
@@ -79,13 +95,6 @@ function BaseSignUp(propsIN: props) {
           />
         );
       })}
-      <Button
-        style={{ color: theme === "light" ? "white" : "black" }}
-        variant="contained"
-        size="large"
-      >
-        next
-      </Button>
     </div>
   );
 }

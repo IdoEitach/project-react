@@ -1,5 +1,5 @@
 import Button from "@mui/material/Button/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../style/nvarBar.css";
 import { AppBar } from "@mui/material";
 
@@ -15,17 +15,18 @@ function Nvarbar() {
   };
 
   return (
-    <AppBar position="static">
-      <div id="NvarBar">
+    <div id="NvarBar">
+      <div className="Button">
         <Button variant="contained" onClick={navigateSingUp}>
           sign up
         </Button>
-
+      </div>
+      <div className="Button">
         <Button variant="contained" onClick={navigateHome}>
           home
         </Button>
       </div>
-    </AppBar>
+    </div>
   );
 }
 export default Nvarbar;

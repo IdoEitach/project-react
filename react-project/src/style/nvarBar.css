@@ -1,4 +1,8 @@
 #NvarBar{
-    width: 20%;
-    align-items: row;
+    width: 100%;
+    display: flex;
+    align-items: column;
+}
+.Button{
+    width: 7.5%;
 }
